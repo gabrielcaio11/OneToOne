@@ -219,7 +219,6 @@ Contribuições são bem-vindas! Fique à vontade para abrir issues ou enviar pu
 
 Este projeto é distribuído sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-📬 Contatos
+## 📬 Contatos
 LinkedIn: [GabrielCaio](https://www.linkedin.com/in/gabriel-caio/)
 
-```
