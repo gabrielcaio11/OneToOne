@@ -1,5 +1,6 @@
 package br.com.gabrielcaiodev.onetoone.model.cliente;
 
+import br.com.gabrielcaiodev.onetoone.controller.error.ResourceNotFoundException;
 import br.com.gabrielcaiodev.onetoone.model.endereco.Endereco;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,12 +30,15 @@ public class ClienteService {
 
     // Remoção de cliente e endereço relacionado
     public void removerCliente(Long clienteId) {
+        if(!clienteRepository.existsById(clienteId)) {
+            throw new ResourceNotFoundException("Cliente não encontrado");
+        }
         clienteRepository.deleteById(clienteId);
     }
 
     // Busca de cliente por id
-    public Optional<Cliente> buscarCliente(Long id) {
-        return clienteRepository.findById(id);
+    public Cliente buscarCliente(Long id) {
+        return clienteRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Cliente não encontrado"));
     }
 }
 
