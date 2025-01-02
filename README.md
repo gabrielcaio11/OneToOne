@@ -145,7 +145,10 @@ No arquivo `pom.xml`:
 **Resposta (caso não encontrado):**
 ```json
 {
-  "error": "Cliente não encontrado"
+   "timestamp": "2025-01-02T18:36:48.106457500Z",
+   "status": 404,
+   "error": "Cliente não encontrado",
+   "path": "/clientes/2"
 }
 ```
 
@@ -156,10 +159,16 @@ No arquivo `pom.xml`:
 **Descrição:** Remove um cliente e exclui automaticamente o endereço associado.
 
 **Resposta de Sucesso:**
+204 No Content
+
+
+**Resposta (caso não encontrado):**
 ```json
 {
-  "status": 204,
-  "message": "Cliente removido com sucesso"
+   "timestamp": "2025-01-02T18:37:52.552373900Z",
+   "status": 404,
+   "error": "Cliente não encontrado",
+   "path": "/clientes/10"
 }
 ```
 
